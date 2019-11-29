@@ -1,0 +1,5 @@
+namePrefix: staging-
+commonLabels:
+  app: eks-demo-nginx
+bases:
+- ../base
