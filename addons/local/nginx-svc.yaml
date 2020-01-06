@@ -1,0 +1,14 @@
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: nginx-service
+  annotations:
+    external-dns.alpha.kubernetes.io/hostname: nginx.$(APP_DOMAIN)
+spec:
+  type: LoadBalancer
+  ports:
+  - port: 8080
+    name: http
+  selector:
+    app: nginx

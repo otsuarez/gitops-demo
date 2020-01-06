@@ -4,26 +4,10 @@ kind: Kustomization
 
 bases:
 - github.com/argoproj/argo-cd/manifests/cluster-install?ref=v1.3.6
-# - github.com/argoproj/argo-cd/manifests/cluster-install?ref=v1.3.0
 - custom
 
 resources:
-# - install.yaml
-# - argocd-cm.yaml
 - addons.yaml
-
-
-# configMapGenerator:
-# - name: argocd-cm
-#   # behavior: merge
-#   behavior: replace
-#   files:
-#   - repositories=repositories.yaml
-
-# secretGenerator:
-# - name: private-github
-#   files:
-#   - sshPrivateKey=key/id_rsa_argocd
 
 generatorOptions:
   disableNameSuffixHash: true

@@ -5,3 +5,16 @@ commonLabels:
   app: gitops-demo
 bases:
 - ../base
+resources:
+- nginx-svc.yaml
+
+vars:
+  - name: APP_DOMAIN
+    objref:
+      kind: ConfigMap
+      name: domain-cm
+      apiVersion: v1
+    fieldref:
+      fieldpath: data.domain
+configurations:
+- kustomizeconfig/config.yml
