@@ -18,9 +18,17 @@ spec:
     path: addons/local
     # kustomize specific config
     kustomize:
+      configMapGenerator:
+        - name: cluster-cm
+          literals:    
+          - domain=local.gitops-demo.acme.com
+      # not working:
+      resources:
+        - domain-cm.yaml
       commonLabels:
         project: demo-gitops
         dev-environment: local
+        demo-version: second
   destination:
     server: https://kubernetes.default.svc
     namespace: default
