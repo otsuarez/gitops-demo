@@ -8,8 +8,8 @@ spec:
   project: default
   source:
     repoURL: git@github.com:otsuarez/gitops-demo.git
-    targetRevision: HEAD
-    path: addons/staging
+    targetRevision: local
+    path: addons/local
   destination:
     server: https://kubernetes.default.svc
     namespace: default

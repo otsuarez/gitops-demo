@@ -4,17 +4,17 @@ bases:
 resources:
 - addons.yaml
 
-configMapGenerator:
-- name: argocd-cm
-  # behavior: merge
-  behavior: replace
-  files:
-  - repositories=repositories.yaml
+# configMapGenerator:
+# - name: argocd-cm
+#   # behavior: merge
+#   behavior: replace
+#   files:
+#   - repositories=repositories.yaml
 
-secretGenerator:
-- name: private-github
-  files:
-  - sshPrivateKey=key/id_rsa_argocd
+# secretGenerator:
+# - name: private-github
+#   files:
+#   - sshPrivateKey=key/id_rsa_argocd
 
 generatorOptions:
   disableNameSuffixHash: true

@@ -1,0 +1,4 @@
+commonLabels:
+  app: gitops-demo
+bases:
+- ../base
