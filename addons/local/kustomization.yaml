@@ -17,4 +17,4 @@ vars:
     fieldref:
       fieldpath: data.domain
 configurations:
-- kustomizeconfig/config.yml
+- kustomizeconfig/config.yaml
