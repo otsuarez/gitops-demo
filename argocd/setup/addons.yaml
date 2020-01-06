@@ -9,20 +9,21 @@ metadata:
 spec:
   syncPolicy:
     automated: {}
-  project: default
+  project: addons
   source:
     repoURL: git@github.com:otsuarez/gitops-demo.git
     targetRevision: local
     path: addons/local
-  destination:
-    server: https://kubernetes.default.svc
-    namespace: default
-
     # kustomize specific config
     kustomize:
       commonLabels:
         project: demo-gitops
         dev-environment: local
+    
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: default
+
 
   # Sync policy
   syncPolicy:
