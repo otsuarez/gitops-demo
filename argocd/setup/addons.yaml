@@ -11,7 +11,8 @@ spec:
     automated: {}
   project: addons
   source:
-    repoURL: git@github.com:otsuarez/gitops-demo.git
+    repoURL: https://github.com/otsuarez/gitops-demo.git
+    # git@github.com:otsuarez/gitops-demo.git
     targetRevision: local
     path: addons/local
     # kustomize specific config

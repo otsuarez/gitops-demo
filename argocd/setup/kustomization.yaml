@@ -8,14 +8,16 @@ bases:
 
 resources:
 - install.yaml
+# - argocd-cm.yaml
 - addons.yaml
 
-configMapGenerator:
-- name: argocd-cm
-  # behavior: merge
-  behavior: replace
-  files:
-  - repositories=repositories.yaml
+
+# configMapGenerator:
+# - name: argocd-cm
+#   # behavior: merge
+#   behavior: replace
+#   files:
+#   - repositories=repositories.yaml
 
 # secretGenerator:
 # - name: private-github

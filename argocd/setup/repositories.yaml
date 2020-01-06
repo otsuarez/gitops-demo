@@ -1,5 +1,5 @@
 ---
 - url: git@github.com:otsuarez/gitops-demo.git
-  # sshPrivateKeySecret:
-  #   key: sshPrivateKey
-  #   name: private-github
+  sshPrivateKeySecret:
+    key: sshPrivateKey
+    name: private-github
