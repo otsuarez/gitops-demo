@@ -2,6 +2,10 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: addons
+  namespace: argocd
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+
 spec:
   syncPolicy:
     automated: {}
@@ -13,3 +17,22 @@ spec:
   destination:
     server: https://kubernetes.default.svc
     namespace: default
+
+    # kustomize specific config
+    kustomize:
+      commonLabels:
+        project: demo-gitops
+        dev-environment: local
+
+  # Sync policy
+  syncPolicy:
+    automated:
+      prune: true # Specifies if resources should be pruned during auto-syncing ( false by default ).
+      selfHeal: true # Specifies if partial app sync should be executed when resources are changed only in target Kubernetes cluster and no git change detected ( false by default ).
+
+  # # Ignore differences at the specified json pointers
+  # ignoreDifferences:
+  # - group: apps
+  #   kind: Deployment
+  #   jsonPointers:
+  #   - /spec/replicas
