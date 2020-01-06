@@ -1,3 +1,4 @@
+---
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
@@ -9,7 +10,7 @@ metadata:
 spec:
   syncPolicy:
     automated: {}
-  project: addons
+  project: default
   source:
     repoURL: https://github.com/otsuarez/gitops-demo.git
     # git@github.com:otsuarez/gitops-demo.git
