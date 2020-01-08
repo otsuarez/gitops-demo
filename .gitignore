@@ -1,1 +1,4 @@
 .envrc
+kubeseal.pem
+sealed-secrets.keys
+secrets/*
