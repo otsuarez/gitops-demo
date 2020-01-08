@@ -207,11 +207,10 @@ app-password
 ---
 
 
-# Backup / Restore
-
-https://andrewaadland.me/2019-11-09-quickstart-bitnami-sealed-secrets/#backup--restore
+# [Backup / Restore](https://andrewaadland.me/2019-11-09-quickstart-bitnami-sealed-secrets/#backup--restore)
 
 Backing Up Your Keys
+
 To create a kubernetes secret that contains the public and private key for the sealed-secrets certificate authority, run this command:
 
 ```sh
