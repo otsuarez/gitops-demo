@@ -2,3 +2,4 @@
 kubeseal.pem
 sealed-secrets.keys
 secrets/*
+argocd/secrets/*

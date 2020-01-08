@@ -18,10 +18,10 @@ spec:
     path: addons/local
     # kustomize specific config
     kustomize:
-      configMapGenerator:
-        - name: cluster-cm
-          literals:    
-            - domain=local.gitops-demo.acme.com
+      # configMapGenerator:
+      #   - name: cluster-cm
+      #     literals:    
+      #       - domain=local.gitops-demo.acme.com
       # not working:
       # resources:
       #   - domain-cm.yaml
