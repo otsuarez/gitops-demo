@@ -21,10 +21,10 @@ spec:
       configMapGenerator:
         - name: cluster-cm
           literals:    
-          - domain=local.gitops-demo.acme.com
+            - domain=local.gitops-demo.acme.com
       # not working:
-      resources:
-        - domain-cm.yaml
+      # resources:
+      #   - domain-cm.yaml
       commonLabels:
         project: demo-gitops
         dev-environment: local
