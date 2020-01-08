@@ -27,8 +27,12 @@ spec:
               secretKeyRef:
                 name: datadog-secret
                 key: api-key
+          - name: DD_COLLECT_KUBERNETES_EVENTS
+            value: "true"
+          - name: DD_LEADER_ELECTION
+            value: "true"
           - name: KUBERNETES
-            value: true
+            value: "true"
           - name: DD_HEALTH_PORT
             value: 5555
           - name: DD_KUBERNETES_KUBELET_HOST
